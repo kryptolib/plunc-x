@@ -1,0 +1,21 @@
+{
+    "name": "kenjiefx/plunc-x",
+    "description": "Plunc-based extension for ScratchPHP",
+    "type": "library",
+    "license": "none",
+    "autoload": {
+        "psr-4": {
+            "Kenjiefx\\PluncX\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kenjie Terrado",
+            "email": "terradoflex@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "kenjiefx/scratch-php": "dev-main"
+    }
+}
