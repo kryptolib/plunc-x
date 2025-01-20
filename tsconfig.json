@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "strictNullChecks": true,
+        "noImplicitReturns": true,
+        "skipLibCheck": true,
+        "target": "es2021",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata":true,
+        "outDir": "./dist",
+        "rootDir":"./theme"
+    },
+    "exclude": ["node_modules"],
+    "include": ["./theme/**/*.ts"]
+}

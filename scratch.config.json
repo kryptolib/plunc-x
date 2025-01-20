@@ -7,5 +7,7 @@
     "create":{
         "useComponentTypeScript" : true
     },
-    "extensions": {}
+    "extensions": {
+        "Kryptolib\\PluncX\\App":{}
+    }
 }

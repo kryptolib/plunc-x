@@ -6,10 +6,12 @@
         <script type="text/javascript"> const blockAutoSubmit=e=>e.preventDefault(); </script>
         <?php template_assets(); ?>
     </head>
-    <body class="width-24">
-        <app plunc-app="app" class="width-24"></app>
+    <body>
+        <app plunc-app="app"></app>
         <template plunc-name="app">
-            
+            <main plunc-component="AppRouter_1"></main>
         </template>
+        <?php new Kryptolib\PluncX\Component('Pluncx/AppRouter'); ?>
+        <?php Kryptolib\PluncX\Component::export(); ?>
     </body>
 </html>

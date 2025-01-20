@@ -1,1 +1,1 @@
-Template Index
+<?php new Kryptolib\PluncX\Component('ProfileCard'); ?>

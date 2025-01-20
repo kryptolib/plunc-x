@@ -1,0 +1,39 @@
+import { StateManager } from "==RELATIVE_PATH==/../helpers/PluncX/StateManager"
+import { Pluncx } from "==RELATIVE_PATH==/../interfaces/pluncx"
+import { ActivationEvent } from "==RELATIVE_PATH==/../services/PluncX/ActivationEvent"
+
+/**
+ * Scoped data stored within the component.
+ */
+type Scope = {
+    /**
+     * These are the different states of `==COMPONENT_NAME==` component. These states
+     * are fed into the component's StateManager.
+     */
+    state: 'active' | 'error' | 'loading' | 'empty'
+}
+
+const scope = Pluncx.scope<Scope>()
+
+/** 
+ * You can self-activate this component by subscribing to the `ActivationEvent`. 
+ * This event is fired after the @AppRouter component signals the page activation.
+ */
+ActivationEvent.subscribe(async () => {
+    await StateManager.switch('active')
+})
+
+/** 
+ * Expose methods that parents of `==COMPONENT_NAME==` component 
+ * can make use of. These methods always return Promise.
+ */
+export namespace ==COMPONENT_NAME== {
+
+    /**
+     * Allows parent component to explicitly render the 
+     * `==COMPONENT_NAME==` component.
+     */
+    export const render = async () => {
+        await StateManager.switch('active')
+    }
+}

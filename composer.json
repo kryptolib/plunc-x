@@ -1,11 +1,11 @@
 {
-    "name": "kenjiefx/plunc-x",
+    "name": "kryptolib/plunc-x",
     "description": "Plunc-based extension for ScratchPHP",
     "type": "library",
     "license": "none",
     "autoload": {
         "psr-4": {
-            "Kenjiefx\\PluncX\\": "src/"
+            "Kryptolib\\PluncX\\": "src/"
         }
     },
     "authors": [
