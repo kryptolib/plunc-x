@@ -1,0 +1,11 @@
+<?php use Kryptolib\PluncX\Component; ?>
+
+<div plunc-if="state == 'loading'" class="width-24">
+    <!-- Show something when this component is being loaded -->
+</div>
+<div plunc-if="state == 'active'" class="width-24">
+    
+</div>
+<div plunc-if="state == 'error'" class="width-24">
+    <!-- Show something when this component fails to render -->
+</div>

@@ -1,0 +1,13 @@
+{
+    "theme": "autumn",
+    "exportDir": "\/public",
+    "build": {
+        "useRandomAssetsFileNames": false
+    },
+    "create":{
+        "useComponentTypeScript" : true
+    },
+    "extensions": {
+        "Kryptolib\\PluncX\\App":{}
+    }
+}

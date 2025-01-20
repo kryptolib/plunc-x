@@ -1,0 +1,10 @@
+#!/usr/bin/php
+<?php
+use Kenjiefx\ScratchPHP\App;
+
+# Define All Global Values Here
+define('ROOT', __DIR__);
+require ROOT.'/vendor/autoload.php';
+
+$app = new App();
+$app->run();

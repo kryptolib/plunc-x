@@ -1,0 +1,42 @@
+import { RequesterEngine } from "==RELATIVE_PATH==/services/PluncX/RequesterEngine"
+import { RouteService } from "==RELATIVE_PATH==/services/PluncX/RouteService"
+import { AppConfig } from "==RELATIVE_PATH==/factories/AppConfig"
+import { TemplateData } from "==RELATIVE_PATH==/services/PluncX/TemplateData"
+
+/** 
+ * Enable this option to route users away to the login
+ * page when there is no valid requester token stored
+ * that is currently active
+ */
+// RouteService.gatekeep()
+
+/**
+ * Do something before the app initializes. To activate the 
+ * error page, simply throw an error.
+ * 
+ * throw new PageErrorException(500, 'some error')
+ */
+export const bootstrap = async () => {
+
+    const APP_CONFIG = new AppConfig()
+
+    /**
+     * To get the current existing user logged in to the app. 
+     * @NOTE By using this method, RequesterEngine will throw 
+     * an error when there is no valid requester.
+     */
+    if (await RequesterEngine.active()) {
+        /** @TODO re-route user */
+        return
+    }
+
+    /** Adds intentional delay */
+    await RouteService.delay(2000)
+
+    /**
+     * Registers view scope in your template which can then be used
+     * by using the placeholder `{{template.view}}`
+     */
+    TemplateData.set('view', 'default')
+
+}
